@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+        document.write("<h1>컴퓨터 가위바위보 맞추기</h1>")
+        var game=prompt("가위 바위 보 중 선택하세요.","가위");
+        var gameNum;//사용자가 발생한 숫자
+
+        switch (game) {
+            case "가위":gameNum=1; break;
+            case "바위":gameNum=2; break;
+            case "보":gameNum=3; break;
+        
+            default: alert("잘못 작성하셨습니다."); location.reload();
+                break;
+        }
+
+        // Math.random() * 3//원래는 0~1인데 *3 해서 0~3까지
+        // Math.floor(Math.random) * 3//
+        var com = Math.floor(Math.random() * 3) + 1;
+        // document.write(com);
+        document.write("<img src='img/math_img_"+com+".jpg'>");
+        
+        if (gameNum == com) {//맞다
+            document.write("<img src='img/game_1.jpg'>");
+        }else{//틀리다
+            document.write("<img src='img/game_2.jpg'>");
+        }
+    </script>
+<body>
+    
+</body>
+</html>

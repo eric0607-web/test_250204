@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    const num = [1, 2, 3];
+    function sum(x, y, z) {
+        return x + y + z;
+    }
+
+    // console.log(sum(1,2,3));//6
+    // console.log(sum(num));//오류
+    // console.log(sum(...num));//6
+    console.log(sum(10, ...num));//10,,1,2
+
+    //...arr : 가변적 매개 변수
+    function sum2(x, ...arr) {
+        return [x, ...arr];
+    }
+    // console.log(sum2("홍갈동",1));//['홍갈동', 1]
+    //...arr에서 1,2,"hello"를 받음
+    console.log(sum2("홍갈동", 1, 2, "hello"));
+
+    //Rest parameter must be last formal parameter
+    //가변적 매개변수 - 처음에 넣으면 안되고 마지막에 작성해야함(오류)
+    // function sum3(...arr,x) {
+    //     return [x,...arr];
+    // }
+    // function sum4(y=10,x,z=100) {//NaN
+    //함수의 default 매개값(마지막에 작성)
+    function sum4(x, y = 10, z = 100) {
+        return x + y + z;
+    }
+    // console.log(sum4(1));//x를 1로 처리
+    // console.log(sum4(1,2));//x=1 y=2로 넣음 
+    // console.log(sum4(1,2,3));//x=1 y=2 z=3 으로 넣음 
+    // console.log(sum4([1,2,3,4]));// 1,2,3,410100 (계산이 안됨)
+    console.log(sum4(...[1, 2, 3, 4]));//배열 원소 1,2,3만 들어감
+
+</script>
+
+<body>
+
+</body>
+
+</html>

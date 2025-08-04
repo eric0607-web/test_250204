@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let obj = { "name": "홍길동", "age": 20 };
+    // console.log(obj);//json 데이터
+    //json이랑 결과는 같지만 다른 방식
+    // <name>
+        //  홍길동
+    // </name>
+    // <age>
+        //20
+    // </age>
+    // console.log(obj.name);
+    // console.log(obj["name"]);
+    
+    
+    
+    // let {name} = obj
+    // console.log(name);//json 데이터의 name값
+    
+    // let {name, age} = obj
+    // console.log(name, age);//json 데이터의 name, age값
+    
+    // let {...arr} = obj
+    // console.log(arr);//가변 변수가 json변수를 받음 
+
+    let person = {
+         "name" : "김철수"
+        , "age" : 30 
+        , "job" : ["programmer", "desinger"]
+        , "info": {"id":"kkk123","email":"namer" }
+    };
+    //info 제외하고 데이터 받음
+    // let{name,age,job}=person;
+    // console.log(name,age,job);
+    
+    //"name":"김철수" 의 김철수를 aaa로 받음
+    // let{name:aaa}=person;
+    // console.log(aaa);
+    
+    //위의 데이터를 bbb, xxx로 받음    
+    let{age:bbb, job:xxx}=person;
+    console.log(bbb, xxx);
+
+</script>
+
+<body>
+
+</body>
+
+</html>

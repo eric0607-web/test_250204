@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var a=1;
+    {
+        var a=2;
+        var b=4;
+    }
+    var a=3;
+    
+    console.log("@# a=>"+a);
+    console.log("@# b=>"+b);
+    
+    let aa=1;//전역 변수
+    
+    {
+        let aa=2;//지역변수
+        let bb=4;//지역변수
+        console.log("@# bb=>"+bb);//정상
+    }
+    console.log("@# aa=>"+aa);
+    // console.log("@# bb=>"+bb);//오류 (지역변수)
+
+    const x=1;
+    // x=2;//const는 재할당이 안됨(오류)
+    console.log("@# x=>"+x);
+    
+    const employee={name:"hong", age:24};
+    // employee{};//오류(객체는 변경 불가)
+    employee.name="kim";//속성값은 변경 가능
+    // console.log("@# employee=>"+employee);
+    console.log(employee);
+</script>
+<body>
+    
+</body>
+</html>

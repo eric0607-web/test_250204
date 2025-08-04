@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //날짜 객체 생성=> today 참조변수가 가리킴
+    var today=new Date();//date객체는 자바에도 있음
+    //getmonth 메소드의 값을  nowmonth 변수로 저장
+    var nowmonth = today.getMonth()+1;
+    var nowDate = today.getDate();
+    //일,월,화,수,목,금,토
+    //0,1,2,3,4,5,6
+    var nowDay = today.getDay();
+    //배열 생성
+    // 배열을 참조 변수로 받음
+    // 배열에는 인덱스가 존재(0에서 시작)
+    var week=new Array("일","월","화","수","목","금","토");
+
+    document.write("<h1>오늘의 날짜 정보</h1>");
+    document.write("현재 월:"+today,"<br>");
+    document.write("현재 월:"+nowmonth,"<br>");
+    document.write("현재 일:"+nowDate,"<br>");
+    // document.write("현재 요일:"+nowDay,"<br>");
+    document.write("현재 요일:"+week[nowDay],"<br>");
+</script>
+<body>
+    
+</body>
+</html>

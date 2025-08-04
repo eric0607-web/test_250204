@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let arr = ["홍길동", "이순신", "홍길자", "김철수"];
+    let n1 = arr[0];
+    let n2 = arr[3];
+    // console.log(n1, n2);
+
+    //배열 개체의 위치요소 반환받아서 a,b,c,d 변수에 할당
+    //구조분해할당
+    // let [a, b, c, d] = arr;
+    // console.log(a,b,c,d);
+    // console.log(arr);
+    
+    // let [m1,,,m2] = arr;
+    // console.log(m1,m2);//홍길동 김철수/ 1,4번째 알아서 할당
+    
+    //arr배열객체를 받아서 x배열 객체로 출력
+    // let [...x] = arr;
+    // console.log(x);
+
+    // k1,k2는 값으로 나머지는 배열객체로 받음
+    let [k1,k2,...all] = arr;
+    console.log(k1,k2,all);
+    
+
+</script>
+
+<body>
+
+</body>
+
+</html>

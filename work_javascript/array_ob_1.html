@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //자바스크립트는 배열로 다양한 데이터를 가질수 있다
+    var arr=[30,"따르릉",true];
+
+
+    document.write("<h1>배열값 가져오기 - 1</h1>");
+    document.write(arr,"<br>");//배열값(원소)
+    document.write(arr[0],"<br>");//첫번째 값
+    document.write(arr[1],"<br>");//두번째 값
+    document.write(arr[2],"<br>");//세번째 값
+    
+    
+    document.write("<h1>배열값 가져오기 - 2</h1>");
+    for(var i=0; i<arr.length; i++){
+        document.write(arr[i],"<br>");//인덳스 사용 출력
+    }
+    
+    document.write("<h1>배열값 가져오기 - 3</h1>");
+    for(var j in arr){
+        document.write(arr[j],"<br>");
+    }
+</script>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var box;// 변수 선언
+        box=100;
+        // 값이 계속 바뀔 수 있음
+        box=30;
+        // 값이 계속 바뀔 수 있음 (자바에서는 오류 이미 선언된 변수라서)
+        var box=50;
+        //선언도 안했을때 오류 - Uncaught ReferenceError
+        //undefined:선언만 했을때 
+        document.write(box);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

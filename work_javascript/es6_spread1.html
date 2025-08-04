@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    const arr = [1, 2, 3];
+    // console.log(arr);//(3)[1,2.3]
+    // spread operator
+    console.log(...arr);//1 2 3
+
+    //배열을 연결하면서 배열 객체로 추가
+    const num1 = [10, 20, 30, arr];
+    //배열을 연결하면서 배열원소로 추가
+    const num2 = [10, 20, 30, ...arr];
+    console.log(num1);//[10, 20, 30, Array(3)]
+    console.log(num2);//[10, 20, 30, 1, 2, 3]
+
+    //배열 중간에 추가
+    const num3 = [10, 20, arr, 30];
+    const num4 = [10, 20, ...arr, 30];
+    console.log(num3);//[10, 20, Array(3), 30]
+    console.log(num4);//[10, 20, 1, 2, 3, 30]
+    
+    //배열객체 복사
+    const num5 = [arr];
+    console.log(num5);//[Array(3)]
+    //배열원소 복사
+    const num6 = [...arr];
+    console.log(num6);//[1, 2, 3]
+    //배열객체 연결
+    const num7 = [arr,num1];
+    console.log(num7);//[Array(3), Array(4)]
+    //배열원소 연결
+    const num8 = [...arr,...num1];
+    console.log(num8);//[1, 2, 3, 10, 20, 30, Array(3)]
+</script>
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //ES5 방식
+    function sum(a,b) {
+        return a+b;
+    }
+
+
+    console.log("@# sum=>"+sum(1,4));
+    
+    //ES6 방식
+    const sum2=(a,b) => a+b;//화살표 방식 함수
+    // const sum2=a,b => a+b;//오류(괄호 생략 안됨)
+    console.log("@# sum2=>"+sum2(1,4));
+    
+    
+    // let sum3=(a) => {return a+10};
+    // let sum3=(a) => a+10;//return, 중괄호 생략 가능
+    //입력변수가 하나일때 (()괄호 생략 가능)
+    let sum3=a => a+10;
+    console.log("@# sum3=>"+sum3(3));
+    
+    
+    // let sum4=(a,b) => {return a+b};+ 중괄호 같이 있어야 정상
+    // let sum4=(a,b) => {a+b};//undefined
+    
+    let sum4=(a,b) => a+b; //return + 중괄호가 같이 없어도 정상
+    console.log("@# sum4=>"+sum4(1,4));
+</script>
+<body>
+    
+</body>
+</html>

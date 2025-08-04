@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var grennArr=["교대","방배","강남"];
+    var yellowArr=["미금","오리","죽전"];
+
+    //인덱스 2에서 1개를 삭제하고 서초,역삼 추가
+    grennArr.splice(2,1,"서초","역삼");
+    // console.log(grennArr);
+    
+    var data1 = yellowArr.pop();
+    var data2 = yellowArr.shift();
+
+    yellowArr.push(data2);//마지막 인덱스에 삽입
+    yellowArr.unshift(data1);//가장 앞의 인덱스에 삽입 
+    
+    console.log(data1);// 마지막 데이터를 잘라내서 변수에 저장/그냥 잘라내는것도 가능
+    console.log(yellowArr);
+    console.log(data2);// 첫번째 데이터를 잘라내서 변수에 저장/그냥 잘라내는것도 가능
+    
+
+
+</script>
+<body>
+    
+</body>
+</html>

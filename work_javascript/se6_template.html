@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+        //es5 문자열 처리
+        var Iname="hong";
+        var fname="gil dong";
+        // var memo="나이: 26 
+        // 경력: 2년";// 오류
+        var memo="나이: 26 \n경력: 2년";
+        var emplayee="my name is " +Iname+" "+fname+" \n"+memo;
+        console.log(emplayee);
+        
+        //es6 문자열 처리
+        var Iname2="hong";
+        var fname2="gil dong";
+        var memo2=`나이: 26  
+        경력: 2년`;//백틱(`)으로 엔터를 침
+        // var memo="나이: 26 \n경력: 2년";
+        var emplayee2="my name is " +Iname2+" "+fname2+" \n"+memo2;
+        console.log(emplayee2);
+
+
+    </script>
+<body>
+    
+</body>
+</html>
